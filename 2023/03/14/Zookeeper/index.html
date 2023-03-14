@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/categories/1-《linux命令》/"/>
+  
+  <link rel="canonical" href="http://example.com/2023/03/14/zookeeper/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,18 +33,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Category: 1.《Linux命令》 - Future-An</title>
-  <meta name="keywords" content="null">
+  <title>Apache zookeeper--集群搭建 - Future-An</title>
+  <meta name="keywords" content="Apache zookeeper,null">
   <meta desc name="description" content="个人博客 - John Doe - Future-An">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="Future-An">
-<meta property="og:url" content="http://example.com/categories/1-%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E3%80%8B/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache zookeeper--集群搭建">
+<meta property="og:url" content="http://example.com/2023/03/14/Zookeeper/index.html">
 <meta property="og:site_name" content="Future-An">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="简介:Linux 和 zookeeper 都是一切为根，都是只有一个根目录。那它们的区别是什么呢？Linux 的节点要么是目录，要么是文件。zookeeper 的节点即可以像目录一样保存自己的子目录，也可以像文件那样保存数据。兼具 文件和目录的功能 Zookeeper 核心架构设计Zookeeper 特点1.Zookeeper 是一个分布式协调服务，是为了解决多个节点状态不一致的问题，充当中间机构">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-03-14T10:18:18.000Z">
+<meta property="article:modified_time" content="2023-03-14T13:59:11.426Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Apache zookeeper">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2069,7 +2072,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2411,25 +2414,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/08/Linux_1/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/14/Zookeeper/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Future-An">
   </span>
@@ -2438,78 +2425,244 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/02/08/Linux_1/"  itemprop="url">
-        文件和目录操作命令
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        Linux命令目录处理在日常工作中是比较常见的，今天就向大家介绍几个常用的跟目录处理有关的命令。
-文件和目录命令查看当前目录内容以及内容属性信息123# ls -l# ls -a# ls -al
--l 以列表的方式显示-a 显示所有信息 以及隐藏文件
-改变当前工作目录12345# cd .# cd ..# cd /# cd ~# cd -
-. 当前工作目录.. 当前工作目录的上一级目录&#x...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        Apache zookeeper--集群搭建
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://s1.ax1x.com/2023/03/11/ppK5SzV.png" class="lazyload" data-srcset="https://s1.ax1x.com/2023/03/11/ppK5SzV.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Future.</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/3-%E3%80%8ALinux%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E3%80%8B/">3.《Linux集群部署》</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/3-%E3%80%8ALinux%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E3%80%8B/" itemprop="url"><span itemprop="name">3.《Linux集群部署》</span></a>
+      </span>
     
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://s1.ax1x.com/2023/03/11/ppK5SzV.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://s1.ax1x.com/2023/03/11/ppK5SzV.png">
-            <meta itemprop="name" content="Future.">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-02-08T18:18:18+08:00">2023-02-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/1-%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E3%80%8B/">1.《Linux命令》</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/1-%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E3%80%8B/" itemprop="url"><span itemprop="name">1.《Linux命令》</span></a>
-            </span>
+
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-14T18:18:18+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Mar 14, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h1><p>Linux 和 zookeeper 都是一切为根，都是只有一个根目录。那它们的区别是什么呢？<br>Linux 的节点要么是目录，要么是文件。<br>zookeeper 的节点即可以像目录一样保存自己的子目录，也可以像文件那样保存数据。兼具 文件和目录的功能</p>
+<h2 id="Zookeeper-核心架构设计"><a href="#Zookeeper-核心架构设计" class="headerlink" title="Zookeeper 核心架构设计"></a>Zookeeper 核心架构设计</h2><h3 id="Zookeeper-特点"><a href="#Zookeeper-特点" class="headerlink" title="Zookeeper 特点"></a>Zookeeper 特点</h3><p>1.Zookeeper 是一个分布式协调服务，是为了解决多个节点状态不一致的问题，充当中间机构来调停。如果出现了不一致，则把这个不一致的情况写入到 Zookeeper 中，Zookeeper 会返回响应，响应成功，则表示帮你达成了一致。<br>2.Zookeeper 虽然是一个集群，但是数据并不是分散存储在各个节点上的，而是每个节点都保存了集群所有的数据。<br>其中一个节点作为主节点，提供分布式事务的写服务，其他节点和这个节点同步数据，保持和主节点状态一致。<br>3.Zookeeper 所有节点的数据状态通过 Zab 协议保持一致。当集群中没有 Leader 节点时，内部会执行选举，选举结束，Follower 和 Leader 执行状态同步；当有 Leader 节点时，Leader 通过 ZAB 协议主导分布式事务的执行，并且所有的事务都是串行执行的。<br>4.Zookeeper 的节点个数是不能线性扩展的，节点越多，同步数据的压力越大，执行分布式事务性能越差。推荐3、5、7 这样的数目。</p>
+<h3 id="Zookeeper-角色的理解"><a href="#Zookeeper-角色的理解" class="headerlink" title="Zookeeper 角色的理解"></a>Zookeeper 角色的理解</h3><p>Zookeeper 并没有沿用 Master&#x2F;Slave 概念，而是引入了 Leader，Follower，Observer 三种角色。<br>通过 Leader 选举算法来选定一台服务器充当 Leader 节点，Leader 服务器为客户端提供读、写服务。<br>Follower 节点可以参加选举，也可以接受客户端的读请求，但是接受到客户端的写请求时，会转发到 Leader 服务器去处理。<br>Observer 角色只能提供读服务，不能选举和被选举，所以它存在的意义是在不影响写性能的前提下，提升集群的读性能。</p>
+<h2 id="zk安装"><a href="#zk安装" class="headerlink" title="zk安装"></a>zk安装</h2><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1xdNDa834TSvHJeH3F8HWug?pwd=pdpt">zk安装包</a> 提取码：pdpt<br>1.zk具体安装部署（选择node1安装 scp给其他节点）<br>2.上传解压重命名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 切换到指定目录</span><br><span class="line">[root@node1 ~] cd /package/software</span><br><span class="line"></span><br><span class="line"># 上传包并且解包</span><br><span class="line">[root@node1 software]  tar zxvf zookeeper-3.4.6.tar.gz -C /package/list</span><br><span class="line"></span><br><span class="line"># 切换到指定目录</span><br><span class="line">[root@node1 list] cd /package/list</span><br><span class="line"></span><br><span class="line"># 给zookeeper-3.4.6目录创建 软连接(快捷方式)</span><br><span class="line">[root@node1 list] ln -s /package/list/zookeeper-3.4.6/ /package/list/zookeeper</span><br></pre></td></tr></table></figure>
+<p>3.修改配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># zk默认加载的配置文件是zoo.cfg 因此需要针对模板进行修改。保证名字正确。</span><br><span class="line">[root@node1 list] cd zookeeper/conf</span><br><span class="line"></span><br><span class="line"># 重命名</span><br><span class="line">[root@node1 conf] mv zoo_sample.cfg zoo.cfg</span><br><span class="line"></span><br><span class="line"># vim编辑 zoo.cfg</span><br><span class="line">[root@node1 conf] vim zoo.cfg</span><br><span class="line"></span><br><span class="line"># 修改</span><br><span class="line">dataDir=/export/data/zkdata</span><br><span class="line"></span><br><span class="line"># 文件最后添加 2888心跳端口 3888选举端口</span><br><span class="line"># 心跳端口是为了监控，集群机器是否正常，选举端口是为了选举出 Leader</span><br><span class="line">server.1=node1:2888:3888</span><br><span class="line">server.2=node2:2888:3888</span><br><span class="line">server.3=node3:2888:3888</span><br></pre></td></tr></table></figure>
+<p>4.在每台机器的dataDir指定的目录下创建一个文件 名字叫做myid</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#myid里面的数字就是该台机器上server编号。server.N  N的数字就是编号</span><br><span class="line">[root@node1 conf]# mkdir -p /package/data/zkdata</span><br><span class="line">[root@node1 conf]# echo 1 &gt; /package/data/zkdata/myid</span><br></pre></td></tr></table></figure>
+<p>5.把安装包同步到其他节点上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 切换指定路径</span><br><span class="line">[root@node1 conf] cd /package/list</span><br><span class="line"></span><br><span class="line"># 把 zookeeper-3.4.6 拷贝到 其他两个机器上</span><br><span class="line">[root@node1 list] scp -r zookeeper-3.4.6/ node2:$PWD</span><br><span class="line">[root@node1 list] scp -r zookeeper-3.4.6/ node3:$PWD</span><br><span class="line"></span><br><span class="line"># 然后在给node2和node3的zk起一个软连接</span><br><span class="line">[root@node2 ~] ln -s /package/list/zookeeper-3.4.6/ /package/list/zookeeper</span><br><span class="line">[root@node3 ~] ln -s /package/list/zookeeper-3.4.6/ /package/list/zookeeper</span><br><span class="line"></span><br><span class="line"># 在给node2和node3创建myid和datadir目录</span><br><span class="line">[root@node2 ~]# mkdir -p /package/data/zkdata</span><br><span class="line">[root@node2 ~]# echo 2 &gt; /package/data/zkdata/myid</span><br><span class="line"></span><br><span class="line"># node3</span><br><span class="line">[root@node3 ~]# mkdir -p /package/data/zkdata</span><br><span class="line">[root@node3 ~]# echo 3 &gt; /package/data/zkdata/myid</span><br></pre></td></tr></table></figure>
+<p>6.zk集群启动<br>每台机器上单独启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 在哪个目录执行启动命令 默认启动日志就生成当前路径下</span><br><span class="line"># 启动node1 ZK服务</span><br><span class="line">[root@node1 ~] /package/list/zookeeper/bin/zkServer.sh  start</span><br><span class="line"></span><br><span class="line"># 启动node2 ZK服务</span><br><span class="line">[root@node2 ~] /package/list/zookeeper/bin/zkServer.sh  start</span><br><span class="line"></span><br><span class="line"># 启动node3 ZK服务</span><br><span class="line">[root@node3 ~] /package/list/zookeeper/bin/zkServer.sh  start</span><br><span class="line"></span><br><span class="line"># 三台机器启动完毕之后 可以使用status查看三台机器角色是否正常。</span><br><span class="line">[root@node1 ~] /package/list/zookeeper/bin/zkServer.sh  status</span><br><span class="line">[root@node2 ~] /package/list/zookeeper/bin/zkServer.sh  status</span><br><span class="line">[root@node2 ~] /package/list/zookeeper/bin/zkServer.sh  status</span><br><span class="line"></span><br><span class="line"># 还可以使用jps命令查看zk进程是否启动。</span><br><span class="line">[root@node1 ~]# jps</span><br><span class="line">2034 Jps</span><br><span class="line">1980 QuorumPeerMain   # 这个就是zk的java进程</span><br></pre></td></tr></table></figure>
+<p>7.编写shell脚本 一键启动和一键停止。<br>本质：在node1机器上执行shell脚本，由&#x3D;&#x3D;shell程序通过ssh免密登录&#x3D;&#x3D;到各个机器上帮助执行命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 一键启动脚本</span><br><span class="line">[root@node1 ~]# vim zk1_start.sh </span><br><span class="line"></span><br><span class="line"># 脚本内容</span><br><span class="line">#!/bin/bash</span><br><span class="line"># 1 数组 放 主机名</span><br><span class="line">hosts=(node1 node2 node3)</span><br><span class="line"># 2 遍历   * 代表数组里的全部</span><br><span class="line">for host in $&#123;hosts[*]&#125;</span><br><span class="line">do</span><br><span class="line">ssh		$host	&quot;source /etc/profile; /package/list/zookeeper/bin/zkServer.sh start&quot;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 一键停止脚本</span><br><span class="line">[root@node1 ~]# vim zk2_stop.sh </span><br><span class="line"></span><br><span class="line"># 脚本内容</span><br><span class="line">#!/bin/bash</span><br><span class="line"># 1 数组 放 主机名</span><br><span class="line">hosts=(node1 node2 node3)</span><br><span class="line"># 2 遍历   * 代表数组里的全部</span><br><span class="line">for host in $&#123;hosts[*]&#125;</span><br><span class="line">do</span><br><span class="line">ssh		$host	&quot;source /etc/profile; /package/list/zookeeper/bin/zkServer.sh stop&quot;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 使用脚本启动zk服务</span><br><span class="line">[root@node1 ~] sh zk1_start.sh </span><br><span class="line"></span><br><span class="line"># 使用脚本停止zk服务</span><br><span class="line">[root@node1 ~] sh zk2_stop.sh </span><br></pre></td></tr></table></figure>
+<p>8.使用客户端访问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用node1 zk服务</span><br><span class="line">[root@node1 ~] /package/list/zookeeper/bin/zkCli.sh -server node1</span><br></pre></td></tr></table></figure>
+<p>部署成功示图<br><img src="/image/cluster/6.png" class="lazyload" data-srcset="/image/cluster/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h1 id="部署ZK工作完成，后续将持续更新。"><a href="#部署ZK工作完成，后续将持续更新。" class="headerlink" title="部署ZK工作完成，后续将持续更新。"></a>部署ZK工作完成，后续将持续更新。</h1>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/02/08/Linux_1/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-14T21:59:11+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Mar 14, 2023</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Apache-zookeeper/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Apache zookeeper</p></a></div>
+  <span hidden itemprop="keywords">Apache zookeeper</span>
   
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/03/14/Zookeeper/&title=Apache zookeeper--集群搭建 - Future-An&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/03/14/Zookeeper/&title=Apache zookeeper--集群搭建 - Future-An&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/03/14/Zookeeper/&title=Apache zookeeper--集群搭建 - Future-An&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/03/11/Linux_preparation/'>
+          <p class='title'>部署Linux集群准备工作<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>简介：什么是集群？什么又是负载均衡？集群(Cluster)所谓集群是指一组独立的计算机系统构成的一个松耦合的多处理器系统，它们之间通过网络实现进程间的通信。应用程序可以通过网络共享内存进行消息传...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/03/14/Zookeeper/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2518,171 +2671,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://s1.ax1x.com/2023/03/11/ppK5SzV.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Future-An.</h2>
-        
-        
-          <p>未来可期.</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">Future-An</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/1-%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E3%80%8B/" href="/categories/1-%E3%80%8ALinux%E5%91%BD%E4%BB%A4%E3%80%8B/"
-            active-action="action-categories1-E3808ALinuxE591BDE4BBA4E3808B"
-            ><div class='name'>1.《Linux命令》</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/2-%E3%80%8A%E5%B1%80%E5%9F%9F%E7%BD%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BA%E3%80%8B/" href="/categories/2-%E3%80%8A%E5%B1%80%E5%9F%9F%E7%BD%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%90%AD%E5%BB%BA%E3%80%8B/"
-            active-action="action-categories2-E3808AE5B180E59F9FE7BD91E8999AE68B9FE69CBAE690ADE5BBBAE3808B"
-            ><div class='name'>2.《局域网虚拟机搭建》</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/3-%E3%80%8ALinux%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E3%80%8B/" href="/categories/3-%E3%80%8ALinux%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E3%80%8B/"
-            active-action="action-categories3-E3808ALinuxE99B86E7BEA4E983A8E7BDB2E3808B"
-            ><div class='name'>3.《Linux集群部署》</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Apache-zookeeper/" style="font-size: 14px; color: #999">Apache zookeeper</a> <a href="/tags/LAN/" style="font-size: 14px; color: #999">LAN</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/preparation/" style="font-size: 14px; color: #999">preparation</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>4 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-03-14 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2023/03/14/Zookeeper/"><div class="item"><time>2023-03-14</time><span>3.《Linux集群部署》</span></div><span>Apache zookeeper--集群搭建</span></a></li><li><a class="widget-last" href="/2023/03/11/Linux_preparation/"><div class="item"><time>2023-03-14</time><span>3.《Linux集群部署》</span></div><span>部署Linux集群准备工作</span></a></li><li><a class="widget-last" href="/2023/02/08/Linux_1/"><div class="item"><time>2023-03-11</time><span>1.《Linux命令》</span></div><span>文件和目录操作命令</span></a></li><li><a class="widget-last" href="/2023/02/21/LAN_Remote/"><div class="item"><time>2023-03-11</time><span>2.《局域网虚拟机搭建》</span></div><span>局域网远程连接（LAN Remote）</span></a></li></ul>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Zookeeper-%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-text">Zookeeper 核心架构设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Zookeeper-%E7%89%B9%E7%82%B9"><span class="toc-text">Zookeeper 特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zookeeper-%E8%A7%92%E8%89%B2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">Zookeeper 角色的理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zk%E5%AE%89%E8%A3%85"><span class="toc-text">zk安装</span></a></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -2690,6 +2703,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files side end -->
 </aside>
+
 
 
         </div>
@@ -3318,7 +3332,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Future-An","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Future-An"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/1.《Linux命令》/","name":"1.《Linux命令》"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Future-An","url":"http://example.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"Future-An","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Future-An","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Future-An","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Future-An"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/3-《Linux集群部署》/","name":"3.《Linux集群部署》"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/03/14/Zookeeper/","name":"Apache zookeeper--集群搭建"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Future-An","url":"http://example.com/","keywords":null,"description":"个人博客","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"个人博客"},"publisher":{"@type":"Organization","name":"Future-An","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Apache zookeeper--集群搭建","description":"个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/03/14/Zookeeper/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Future-An","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/03/14/Zookeeper/","wordCount":0,"datePublished":"2023-03-14T10:18:18.000Z","dateModified":"2023-03-14T13:59:11.426Z","articleSection":"3.《Linux集群部署》","keywords":"Apache zookeeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
