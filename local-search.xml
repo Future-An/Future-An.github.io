@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>测试文件</title>
+    <link href="/2023/06/27/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/"/>
+    <url>/2023/06/27/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2><h2 id="giscus"><a href="#giscus" class="headerlink" title="giscus"></a><a href="https://github.com/apps/giscus">giscus</a></h2><p>是由 <a href="https://docs.github.com/en/discussions">GitHub Discussions</a> 驱动的评论系统。让访客借助 GitHub 在你的网站上留下评论和反应吧！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo搭建</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>酷我音乐飙升榜下载</title>
+    <link href="/2023/02/10/%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90%E9%A3%99%E5%8D%87%E6%A6%9C%E4%B8%8B%E8%BD%BD/"/>
+    <url>/2023/02/10/%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90%E9%A3%99%E5%8D%87%E6%A6%9C%E4%B8%8B%E8%BD%BD/</url>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>昨天我姐让我给她的车载U盘下载一些流行的歌曲，那时候我想到了我之前写过得一个 python脚本，使用的网易云的API，写的脚本很简单。虽然脚本简单，但功能照样可以实现。之后写了一个酷我音乐的脚本<del>同样很简单</del>，只能通过音乐ID 一个个，实在是太慢了，不只只是慢，Ctrl c 和 Ctrl v 都快按烂了，实在是不知道说什么了，直接上代码吧（本人 python 小白一枚，如有大佬，还望可以指点）</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><span class="hljs-comment"># mid_all 音乐的ID  name_all 歌曲名  sName_all 歌手及专辑</span><br>i = <span class="hljs-number">0</span><br>r = requests.get(<span class="hljs-string">&#x27;https://kuwo.cn/newh5/bang/content?bid=93&amp;pic=http://img1.kwcdn.kuwo.cn/star/upload/8/8/1543919795640_.png&#x27;</span>) <span class="hljs-comment">#这个地址忘记从哪找到的了</span><br>soup = BeautifulSoup(r.text,<span class="hljs-string">&#x27;html.parser&#x27;</span>)<br>mid_all =[]<br>mid = re.findall(<span class="hljs-string">&#x27;\(\d&#123;5,&#125;\)&#x27;</span>,r.text)<br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> mid:<br>    m = re.findall(<span class="hljs-string">&#x27;\d+&#x27;</span>,x)<br>    mid_a = <span class="hljs-string">&#x27;&#x27;</span>.join(m)<br>    mid_all.append(mid_a)<br>    i+=<span class="hljs-number">1</span><br><br>name_all = []<br>singBox = soup.find_all(<span class="hljs-string">&#x27;li&#x27;</span>, class_=<span class="hljs-string">&#x27;singBox&#x27;</span>)<br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> singBox:<br>    ID_name = x.find(<span class="hljs-string">&#x27;p&#x27;</span>)<br>    ID = ID_name.text<br>    name_all.append(ID)<br><br>sName_all =[]<br>singName = soup.find_all(<span class="hljs-string">&#x27;p&#x27;</span>, class_=<span class="hljs-string">&#x27;singName&#x27;</span>)<br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> singName:<br>    sName = x.text<br>    sName_all.append(sName)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;共&#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-built_in">len</span>(mid_all)) + <span class="hljs-string">&#x27;首音乐&#x27;</span>)<br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,i):<br>    download = requests.get(<span class="hljs-string">&quot;http://antiserver.kuwo.cn/anti.s?rid=MUSIC_&quot;</span> + mid_all[x] +<span class="hljs-string">&quot;&amp;response=res&amp;format=mp3|aac&amp;type=convert_url&amp;br=320kmp3&amp;agent=iPhone&amp;callback=getlink&amp;jpcallback=getlink.mp3&quot;</span>)<br>    path = <span class="hljs-string">&quot;C:\\Users\\MECHREVO\\Music\\1\\&quot;</span> + name_all[x] + <span class="hljs-string">&#x27;--&#x27;</span> + sName_all[x] + <span class="hljs-string">&quot;.mp3&quot;</span> <span class="hljs-comment">#记得改地址</span><br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(path,<span class="hljs-string">&quot;wb&quot;</span>) <span class="hljs-keyword">as</span> f:<br>            f.write(r.content)<br>            f.close()<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\033[35m&#x27;</span>+mid_all[x] + <span class="hljs-string">&#x27;\033[0m--\033[31m歌曲名\033[0m--\033[31m&#x27;</span> + name_all[x] + <span class="hljs-string">&#x27;\033[0m--\033[32m歌手及专辑\033[0m--\033[32m&#x27;</span> + sName_all[x] + <span class="hljs-string">&#x27;\033[0m&#x27;</span> + <span class="hljs-string">&#x27;--\033[31m[下载完成]\033[0m&#x27;</span>)<br>    <span class="hljs-keyword">except</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\033[35m&#x27;</span>+mid_all[x] + <span class="hljs-string">&#x27;\033[0m--\033[31m歌曲名\033[0m--\033[31m&#x27;</span> + name_all[x] + <span class="hljs-string">&#x27;\033[0m--\033[32m歌手及专辑\033[0m--\033[32m&#x27;</span> + sName_all[x] + <span class="hljs-string">&#x27;\033[0m&#x27;</span> + <span class="hljs-string">&quot;--\033[32m[下载失败]\033[0m&quot;</span>)<br><br></code></pre></td></tr></table></figure><p>附上截图</p><img src="1.jpg" style="zoom:80%;" />]]></content>
+    
+    
+    <categories>
+      
+      <category>python爬虫</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo 评论系统（giscus）</title>
+    <link href="/2023/02/08/Hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89/"/>
+    <url>/2023/02/08/Hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h2 id="giscus"><a href="#giscus" class="headerlink" title="giscus"></a><a href="https://github.com/apps/giscus">giscus</a></h2><p>是由 <a href="https://docs.github.com/en/discussions">GitHub Discussions</a> 驱动的评论系统。让访客借助 GitHub 在你的网站上留下评论和反应吧！</p><h2 id="它如何运作"><a href="#它如何运作" class="headerlink" title="它如何运作"></a>它如何运作</h2><p>giscus 加载时，会使用 <a href="https://docs.github.com/en/graphql/guides/using-the-graphql-api-for-discussions#search">GitHub Discussions 搜索 API</a> 根据选定的映射方式（如 <code>URL</code>、<code>pathname</code>、<code>&lt;title&gt;</code> 等）来查找与当前页面关联的 discussion。如果找不到匹配的 discussion，giscus bot 就会在第一次有人留下评论或回应时自动创建一个 discussion。</p><p>要评论，访客必须按 GitHub OAuth 流程授权 <a href="https://github.com/apps/giscus">giscus app</a> <a href="https://docs.github.com/en/developers/apps/identifying-and-authorizing-users-for-github-apps">代表他发帖</a>。或者访客也可以直接在 GitHub Discussion 里评论。你可以在 GitHub 上管理评论。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>需要有一个GitHub仓库，并且仓库需要满足以下三个条件：</p><ol><li>此仓库是<a href="https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility#making-a-repository-public">公开的</a>，否则访客将无法查看 discussion。</li><li><strong><a href="https://github.com/apps/giscus">giscus</a> app 已安装</strong>否则访客将无法评论和回应。</li><li><strong>Discussions</strong>功能已在你的仓库中<a href="https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository">启用</a>（←点击查看如何启用）。</li></ol><h2 id="giscus-配置"><a href="#giscus-配置" class="headerlink" title="giscus 配置"></a>giscus 配置</h2><p>在 <a href="https://giscus.app/zh-CN">giscus</a> 页面根据你的喜好进行配置，配置完成后会生成一个配置脚本。</p><p><img src="/Hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89/1.png"></p><p><img src="/Hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89/2.png"></p><p>配置完成后会出现以下脚本</p><p><img src="/Hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89/3.png"></p><h2 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h2><p>在你的 Hexo 博客目录中执行以下命令，安装 hexo-next-giscus 插件。</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua">npm install hexo-<span class="hljs-built_in">next</span>-giscus <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure><p>然后在 Hexo 或者 theme 的 _config.yml 配置文件添加如下内容：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">giscus:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-comment"># Github repository name</span><br>  <span class="hljs-attr">repo_id:</span> <span class="hljs-comment"># Github repository id</span><br>  <span class="hljs-attr">category:</span> <span class="hljs-comment"># Github discussion category</span><br>  <span class="hljs-attr">category_id:</span> <span class="hljs-comment"># Github discussion category id</span><br>  <span class="hljs-comment"># Available values: pathname | url | title | og:title</span><br>  <span class="hljs-attr">mapping:</span> <span class="hljs-string">pathname</span><br>  <span class="hljs-comment"># Available values: 0 | 1 </span><br>  <span class="hljs-attr">reactions_enabled:</span> <span class="hljs-number">1</span><br>   <span class="hljs-comment"># Available values: 0 | 1 </span><br>  <span class="hljs-attr">emit_metadata:</span> <span class="hljs-number">1</span><br>  <span class="hljs-comment"># Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme</span><br>  <span class="hljs-attr">theme:</span> <span class="hljs-string">light</span><br>  <span class="hljs-comment"># Available values: en | zh-C</span><br>  <span class="hljs-attr">lang:</span> <span class="hljs-string">en</span><br>  <span class="hljs-comment"># Available value: anonymous</span><br>  <span class="hljs-attr">crossorigin:</span> <span class="hljs-string">anonymous</span><br></code></pre></td></tr></table></figure><h2 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">hexo cl <span class="hljs-meta">&amp; hexo g &amp; hexo server</span><br></code></pre></td></tr></table></figure><p>浏览器打开 <a href="http://localhost:4000/">http://localhost:4000</a>，在文章末尾可以看到 giscus 评论区了</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo搭建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
